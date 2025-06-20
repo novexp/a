@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀主题站 - [页面名称]</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="王者荣耀">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="heroes.html">英雄</a></li>
+                    <li><a href="skins.html">皮肤</a></li>
+                    <li><a href="esports.html">赛事活动</a></li>
+                    <li><a href="lore.html">世界观</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div style="height: 100px;"></div>
+    <h2>王者大陆世界观</h2>
+    <main class="container lore-layout">
+  
+   
+        <aside class="lore-sidebar hok-panel fade-in">
+            <h3>目录</h3>
+            <ul>
+                <li><a href="#factions">主要阵营</a></li>
+                <li><a href="#history">关键历史</a></li>
+                <li><a href="#heroes-lore">英雄故事</a></li>
+                </ul>
+        </aside>
+   
+        <section class="lore-content">
+            <article id="factions" class="lore-section hok-card fade-in">
+                <h3>主要阵营</h3>
+                <p>王者大陆拥有众多势力，各怀目的，纷争不断...</p>
+                <div class="image-container card-image-cover" style="height: 250px;">
+                    <img src="images/qqq.jpg" alt="阵营图">
+                </div>
+   
+                <h4>长安城邦</h4>
+                <p>繁华的东方都市，律法森严，也隐藏着暗流涌动...</p>
+                <details class="hok-details">
+                    <summary>了解更多长安阵营</summary>
+                    <div class="details-content">
+                         <p>长安的代表英雄有：李白、狄仁杰、上官婉儿...</p>
+                         </div>
+                </details>
+   
+                <h4>稷下学院</h4>
+                <p>知识与智慧的象征，各路天才汇聚于此...</p>
+                 <details class="hok-details">
+                    <summary>了解更多稷下阵营</summary>
+                    <div class="details-content">
+                         <p>稷下的代表英雄有：老夫子、庄周、墨子...</p>
+                         </div>
+                </details>
+                </article>
+   
+             <article id="history" class="lore-section hok-card fade-in">
+                <h3>关键历史事件</h3>
+                <p>王者大陆的历史由无数传说与战争构成...</p>
+                <blockquote class="hok-quote">
+                    <p>"长城，是希望，也是阻碍。" —— 守约</p>
+                </blockquote>
+   
+                <h4>魔种入侵</h4>
+                <p>曾经给王者大陆带来巨大灾难的事件...</p>
+   
+                </article>
+   
+             <article id="heroes-lore" class="lore-section hok-card fade-in">
+                <h3>英雄个人故事</h3>
+                <p>每位英雄都有自己独特的经历和羁绊...</p>
+                <h4>李白</h4>
+                <p>潇洒的剑仙，酒与诗的追随者...</p>
+                </article>
+   
+            </section>
+   
+   </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 王者荣耀主题网站 (学习作品)</p>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script> </body>
+    <style>
+        /* 世界观页面布局 (同原神方案，侧边栏+内容) */
+.lore-layout {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+     .lore-layout {
+        flex-direction: row;
+    }
+}
+
+/* 侧边栏目录 (同通用样式，颜色调整) */
+.lore-sidebar {
+    flex: 0 0 250px; /* 侧边栏宽度 */
+    height: fit-content;
+     position: sticky;
+     top: 90px;
+}
+
+.lore-sidebar h3 {
+     color: var(--hok-color-secondary);
+     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.lore-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lore-sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.lore-sidebar ul li a {
+    display: block;
+    padding: 8px 15px;
+    color: var(--hok-color-text-light);
+    text-decoration: none;
+    border-left: 3px solid transparent; /* 左侧边框 */
+    transition: background-color 0.3s ease, border-left-color 0.3s ease, color 0.3s ease;
+}
+
+.lore-sidebar ul li a:hover {
+    background-color: rgba(var(--hok-color-accent), 0.2);
+    border-left-color: var(--hok-color-accent);
+    color: var(--hok-color-accent);
+}
+
+/* 故事内容区域 */
+.lore-content {
+    flex-grow: 1;
+}
+
+.lore-section {
+    margin-bottom: 40px;
+    /* fade-in 动画类 */
+}
+
+.lore-section h3 {
+    text-align: left; /* 文章章节标题左对齐 */
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--hok-color-primary); /* 红色下划线 */
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.lore-section h4 {
+     text-align: left;
+     color: var(--hok-color-accent);
+     margin-top: 20px;
+     margin-bottom: 10px;
+     border-bottom: 1px dashed var(--hok-border-color);
+     padding-bottom: 3px;
+     text-shadow: none;
+}
+
+
+.lore-section .image-container {
+     margin: 20px auto; /* 图片居中 */
+     max-width: 80%; /* 控制图片最大宽度 */
+     height: 300px; /* 图片固定高度 */
+     border: 1px solid var(--hok-border-color);
+     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.lore-section .image-container img {
+     object-fit: cover;
+}
+
+
+/* 引用块 */
+.hok-quote {
+    border-left: 4px solid var(--hok-color-secondary);
+    padding: 15px 25px;
+    margin: 20px 0;
+    font-style: italic;
+    background-color: rgba(var(--hok-color-accent), 0.2);
+    color: var(--hok-color-text-light);
+     border-radius: 0 8px 8px 0; /* 右侧圆角 */
+}
+
+.hok-quote footer {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* details/summary 样式 */
+.hok-details {
+    margin: 20px 0;
+    border: 1px solid var(--hok-border-color);
+    border-radius: 5px;
+    background-color: rgba(var(--hok-color-primary), 0.1);
+    overflow: hidden;
+}
+
+.hok-details summary {
+    padding: 15px;
+    background-color: rgba(var(--hok-color-primary), 0.3);
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--hok-color-secondary);
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.hok-details summary:hover {
+     background-color: rgba(var(--hok-color-primary), 0.5);
+}
+
+.hok-details summary::-webkit-details-marker {
+    display: none;
+}
+.hok-details summary::before {
+    content: '+ ';
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.hok-details[open] summary::before {
+    content: '- ';
+    transform: rotate(180deg);
+}
+
+.details-content {
+    padding: 15px;
+    border-top: 1px solid var(--hok-border-color);
+}
+
+
+/* 更多世界观特定样式... */
+    </style>
+</html>

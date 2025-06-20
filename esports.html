@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀主题站 - [页面名称]</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="王者荣耀">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="heroes.html">英雄</a></li>
+                    <li><a href="skins.html">皮肤</a></li>
+                    <li><a href="esports.html">赛事活动</a></li>
+                    <li><a href="lore.html">世界观</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div style="height: 100px;"></div>
+
+    <main class="container">
+        <h2>赛事中心</h2>
+    
+        <section class="esports-news hok-panel fade-in">
+            <h3>最新赛事资讯</h3>
+            <div class="news-grid">
+                <div class="hok-card news-card fade-in">
+                    <div class="image-container card-image-cover">
+                         <img src="images/ccc.png" alt="赛事新闻图">
+                    </div>
+                    <div class="card-content">
+                        <h3>KPL王者荣耀职业联赛春季赛</h3>
+                        <p>王者荣耀职业联赛（简称KPL）是王者荣耀最高规格的专业电竞赛事，也是目前全球受众最多、影响力最大的移动电竞职业赛事之一...</p>
+                        <a href="#" class="read-more">阅读详情 &gt;</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+    
+        <section class="upcoming-matches hok-panel fade-in">
+            <h3>近期赛程</h3>
+            <table class="match-schedule-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>时间</th>
+                        <th>对阵双方</th>
+                        <th>比分</th>
+                         <th>赛事阶段</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-10-27</td>
+                        <td>18:00</td>
+                        <td><span class="team">WE</span> vs <span class="team">IG</span></td>
+                        <td>3:1</td>
+                         <td>季后赛</td>
+                    </tr>
+                     <tr>
+                        <td>2023-10-28</td>
+                        <td>20:00</td>
+                        <td><span class="team">FPX</span> vs <span class="team">TT</span></td>
+                        <td>-</td>
+                         <td>季后赛</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+    
+        <section class="team-list hok-panel fade-in">
+             <h3>参赛战队</h3>
+             <ul>
+                 <li><a href="#" class="genshin-link">成都AG超玩会</a></li>
+                 <li><a href="#" class="genshin-link">佛山DRG</a></li>
+                 </ul>
+         </section>
+    
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 王者荣耀主题网站 (学习作品)</p>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script> </body>
+    <style>
+        /* 赛事新闻网格同首页样式 */
+
+/* 赛程表格 */
+.match-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.match-schedule-table th, .match-schedule-table td {
+    border: 1px solid var(--hok-border-color);
+    padding: 12px;
+    text-align: center;
+    color: var(--hok-color-text-light);
+}
+
+.match-schedule-table th {
+    background-color: var(--hok-color-accent);
+    color: var(--hok-color-text-light);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.match-schedule-table tbody tr {
+    background-color: rgba(30, 30, 30, 0.6);
+    transition: background-color 0.3s ease;
+}
+.match-schedule-table tbody tr:nth-child(even) {
+     background-color: rgba(30, 30, 30, 0.8); /* 隔行变色 */
+}
+
+.match-schedule-table tbody tr:hover {
+    background-color: rgba(var(--hok-color-primary), 0.5); /* 悬停高亮 */
+}
+
+.match-schedule-table td .team {
+     font-weight: bold;
+     color: var(--hok-color-secondary); /* 战队名称使用金色 */
+}
+
+/* 战队列表 (简单样式) */
+.team-list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.team-list li {
+    background-color: rgba(var(--hok-color-accent), 0.2);
+    border: 1px solid var(--hok-border-color);
+    padding: 10px;
+    margin-bottom: 8px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.team-list li:hover {
+     background-color: rgba(var(--hok-color-accent), 0.5);
+    transform: translateX(5px);
+}
+
+.team-list a {
+    color: var(--hok-color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: block; /* 让链接填充整个列表项 */
+}
+.team-list a:hover {
+    color: white;
+}
+
+
+/* 更多赛事活动特定样式... */
+    </style>
+</html>
