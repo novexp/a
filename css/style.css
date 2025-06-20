@@ -1,0 +1,229 @@
+/* CSS 变量用于统一管理颜色、字体等 */
+:root {
+    --hok-color-primary: #b73030; /* 主色调：深红色 */
+    --hok-color-secondary: #e8c070; /* 次色调：金色/橙色 */
+    --hok-color-accent: #5a4a8c; /* 点缀色：紫色 */
+    --hok-color-text-light: #ffffff; /* 浅色文本 */
+    --hok-color-text-dark: #333333; /* 深色文本 */
+    --hok-color-bg-dark: #1a1a1a; /* 深色背景 */
+    --hok-color-panel-bg: rgba(30, 30, 30, 0.9); /* 面板背景 (半透明) */
+    --hok-border-color: #5a4a8c; /* 边框颜色 */
+    --hok-font-title: 'YourChosenTitleFont', sans-serif; /* 标题字体 */
+    --hok-font-body: 'YourChosenBodyFont', sans-serif; /* 正文字体 */
+}
+
+body {
+    font-family: var(--hok-font-body);
+    color: var(--hok-color-text-light);
+    background-color: var(--hok-color-bg-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* 可以添加背景纹理或图片 */
+     background-image: url('images/background_pattern.png'); /* 示例背景纹理 */
+    background-size: cover;
+    background-attachment: fixed; /* 背景固定 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--hok-color-panel-bg);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+     backdrop-filter: blur(5px); /* 毛玻璃效果 */
+    border-bottom: 2px solid var(--hok-color-primary); /* 底部红色边框 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Logo大小 */
+    filter: drop-shadow(0 0 5px var(--hok-color-secondary)); /* logo发光效果 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--hok-color-text-light);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    text-transform: uppercase; /* 大写 */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 从中间开始 */
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background-color: var(--hok-color-secondary); /* 金色下划线 */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--hok-color-secondary);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0; /* 动画到完全覆盖 */
+}
+
+main {
+    margin-top: 80px; /* 留出头部高度 */
+    padding: 30px 0;
+}
+
+footer {
+    background-color: var(--hok-color-primary);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--hok-color-text-light);
+    border-top: 2px solid var(--hok-color-secondary);
+}
+
+/* 通用按钮风格 */
+.hok-button {
+    display: inline-block;
+    background: linear-gradient(to bottom, var(--hok-color-primary), darken(var(--hok-color-primary), 15%));
+    color: var(--hok-color-text-light);
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    position: relative; /* 用于伪元素效果 */
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+     border: 1px solid var(--hok-color-secondary); /* 金色边框 */
+}
+
+.hok-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* 光泽效果 */
+    transition: left 0.3s ease;
+}
+
+.hok-button:hover {
+     background: linear-gradient(to bottom, lighten(var(--hok-color-primary), 10%), var(--hok-color-primary));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hok-button:hover::before {
+    left: 0;
+}
+
+.hok-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 通用面板/卡片风格 */
+.hok-panel, .hok-card {
+    background-color: var(--hok-color-panel-bg);
+    border: 2px solid var(--hok-border-color); /* 紫色边框 */
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 部分面板可以有斜角 */
+/* .hok-panel-angled {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+} */
+
+
+/* 标题风格 */
+h2, h3, h4 {
+    font-family: var(--hok-font-title);
+    color: var(--hok-color-secondary); /* 金色标题 */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px var(--hok-color-accent); /* 阴影加紫光 */
+    text-transform: uppercase;
+}
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; color: var(--hok-color-accent); text-shadow: none;}
+
+
+/* 图片处理方法 (固定容器大小并显示完整图片) */
+.image-container {
+    width: 100%; /* 或者固定像素值 */
+    height: 200px; /* 固定高度 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    position: relative; /* 用于定位图片 */
+    background-color: #000; /* 容器背景，防止图片未加载时的空白 */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 关键：object-fit */
+    object-fit: cover; /* 填充容器，可能会裁剪图片边缘 */
+    /* object-fit: contain; */ /* 保持宽高比，适应容器，图片完整，可能留白 */
+    /* object-position: center; */ /* 图片在容器中的位置 (默认center) */
+}
+/* 示例：图片容器只用于封面图 */
+.card-image-cover .image-container img {
+    object-fit: cover; /* 卡片封面常用cover */
+}
+/* 示例：图片容器用于展示完整角色立绘或皮肤 */
+.card-image-contain .image-container img {
+     object-fit: contain; /* 立绘展示常用contain */
+}
+
+
+/* 元素进入动画 (同原神方案，通用类) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 其他通用样式... */
