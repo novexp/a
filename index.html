@@ -1,23 +1,212 @@
 <!DOCTYPE html>
-<!-- saved from url=https://www.fqlu.com/ -->
-<html style="font-size: 16px;">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="renderer" content="webkit">
-		<meta name="force-rendering" content="webkit">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="keywords" content="网址导航,上网主页,上网导航,网址大全,123导航,脱单网址导航,前端导航,收藏夹">
-		<meta name="description" content="123（www.fqlu.com）是一个简洁的网址导航网站。你可以自定义上网常用网址、自定义你需要的工具模块。你还可以发现、收集、分享，Web开发、设计工作中的优质资源、干货。">
-		<link rel="shortcut icon" href="https://www.fqlu.com/favicon.ico"
-		type="image/x-icon">
-		<title>
-			123网址导航！
-		</title>
-		<li>
-			123
-               </li>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀主题站 - [页面名称]</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="王者荣耀">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="heroes.html">英雄</a></li>
+                    <li><a href="skins.html">皮肤</a></li>
+                    <li><a href="esports.html">赛事活动</a></li>
+                    <li><a href="lore.html">世界观</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	</body>
+    <main>
+        <section class="hero-section">
+            <div class="hero-background image-container">
+                <img src="images/bg.png" alt="王者荣耀背景">
+            </div>
+            <div class="hero-content container">
+                <h1>欢迎来到王者峡谷</h1>
+                <p>集结，准备团战！</p>
+                <a href="heroes.html" class="hok-button">查看全部英雄</a>
+            </div>
+        </section>
+    
+        <section class="latest-news container fade-in hok-panel">
+            <h2>最新资讯</h2>
+            <div class="news-grid">
+                <div class="hok-card news-card fade-in">
+                    <div class="image-container card-image-cover">
+                         <img src="images/111.webp" alt="新闻图">
+                    </div>
+                    <div class="card-content">
+                        <h3>新皮肤：大耳狗之梦-瑶</h3>
+                        <p>云端乐园中，瑶和大耳狗一起在大耳狗甜品坊中...</p>
+                        <a href="#" class="read-more">阅读详情 &gt;</a>
+                    </div>
+                </div>
+                 <div class="hok-card news-card fade-in">
+                    <div class="image-container card-image-cover">
+                         <img src="images/222.webp" alt="新闻图">
+                    </div>
+                    <div class="card-content">
+                        <h3>新皮肤：云诺千山-公孙离</h3>
+                        <p>汇点滴心念，化云神，调风雨，济人间。</p>
+                        <a href="#" class="read-more">阅读详情 &gt;</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+    
+        <section class="featured-heroes container fade-in hok-panel">
+            <h2>精选英雄</h2>
+            <div class="heroes-grid">
+                <div class="hok-card hero-preview-card fade-in">
+                     <div class="image-container card-image-contain">
+                        <img src="images/333.jpg" alt="英雄1">
+                     </div>
+                     <div class="card-content">
+                        <h3>百里守约 射手</h3>
+                        <p>万箭齐发,吾便为箭</p>
+                        <a href="heroes.html#hero1" class="read-more">了解更多 &gt;</a>
+                     </div>
+                </div>
+                <div class="hok-card hero-preview-card fade-in">
+                     <div class="image-container card-image-contain">
+                        <img src="images/444.webp" alt="英雄2">
+                     </div>
+                     <div class="card-content">
+                        <h3>张飞 辅助</h3>
+                        <p>万箭齐发,吾便为箭</p>
+                        <a href="heroes.html#hero2" class="read-more">了解更多 &gt;</a>
+                     </div>
+                </div>
+                </div>
+         </section>
+    
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 王者荣耀主题网站 (学习作品)</p>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script> </body>
+    <style>
+        /* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh; /* 视口高度的70% */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%; /* 使图片略高于容器，便于视差 */
+    z-index: -1;
+}
+.hero-background img {
+    object-fit: cover;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--hok-color-text-light);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--hok-color-secondary);
+     text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 15px var(--hok-color-primary);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+
+/* 卡片网格布局 */
+.news-grid, .heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.news-card, .hero-preview-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 表示可点击/交互 */
+}
+
+.news-card:hover, .hero-preview-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+     border-color: var(--hok-color-secondary); /* 悬停边框变色 */
+}
+
+
+.news-card .image-container, .hero-preview-card .image-container {
+     /* 使用 .image-container 样式来处理图片大小和显示 */
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--hok-border-color);
+}
+
+.news-card .card-content, .hero-preview-card .card-content {
+    padding: 0 10px 10px 10px; /* 调整内边距 */
+}
+
+
+.news-card h3, .hero-preview-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+    text-shadow: none;
+    color: var(--hok-color-secondary);
+}
+
+.news-card p, .hero-preview-card p {
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--hok-color-accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--hok-color-secondary);
+}
+
+
+/* 视差效果 CSS (需要JS控制) */
+.hero-section .hero-background img {
+    /* initial transform controlled by JS */
+}
+
+
+/* 更多首页特定样式... */
+    </style>
 </html>
